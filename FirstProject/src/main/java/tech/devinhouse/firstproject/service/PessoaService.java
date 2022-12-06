@@ -6,11 +6,12 @@ import tech.devinhouse.firstproject.model.PessoaModel;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class PessoaService {
 
-    private  static List<PessoaModel> pessoaModelList = new ArrayList<PessoaModel>();
+    public static List<PessoaModel> pessoaModelList = new ArrayList<>();
     public PessoaService() {
         PessoaModel pessoa = new PessoaModel(1L,"Pessoa 1");
         PessoaModel pessoa2 = new PessoaModel(2L,"Pessoa 2");
@@ -24,7 +25,9 @@ public class PessoaService {
         }
         return pessoaModelList;
     }
-    public void getPessoa(){}
+    public List<PessoaModel> getPessoa(Long id){
+        return pessoaModelList.stream().filter(pessoa -> pessoa.getId().equals(id)).toList();
+    }
     public void postPessoa(){}
     public void updatePessoa(){}
 

@@ -11,6 +11,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PessoaModel {
-private  Long id;
-private String nome;
+    private  Long id;
+    private String nome;
 }

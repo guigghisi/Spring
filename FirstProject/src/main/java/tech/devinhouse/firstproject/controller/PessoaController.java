@@ -37,4 +37,8 @@ public class PessoaController {
     public void updatePessoa(Long id,PessoaModel pessoaModel){
         service.updatePessoa(id,pessoaModel);
     }
+    @DeleteMapping
+    public void deletePessoa(Long id){
+service.deletePessoa(id);
+    }
 }

@@ -36,5 +36,8 @@ public class PessoaService {
         pessoaModelList.add(pessoaModel);
         pessoaModelList.remove(pessoaSelecionada);
     }
-
+public void deletePessoa(Long id){
+    var pessoaSelecionada = pessoaModelList.stream().filter(pessoa -> pessoa.getId().equals(id));
+    pessoaModelList.remove(pessoaSelecionada);
+}
 }

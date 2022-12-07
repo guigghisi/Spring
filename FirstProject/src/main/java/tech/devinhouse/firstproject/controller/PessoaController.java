@@ -33,4 +33,8 @@ public class PessoaController {
     public void postPessoa(@RequestBody PessoaModel pessoaModel){
         service.postPessoa(pessoaModel);
     }
+    @PutMapping
+    public void updatePessoa(Long id,PessoaModel pessoaModel){
+        service.updatePessoa(id,pessoaModel);
+    }
 }

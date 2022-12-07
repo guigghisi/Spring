@@ -31,6 +31,10 @@ public class PessoaService {
     public void postPessoa(PessoaModel pessoaModel){
         pessoaModelList.add(pessoaModel);
     }
-    public void updatePessoa(){}
+    public void updatePessoa(Long id, PessoaModel pessoaModel){
+        var pessoaSelecionada = pessoaModelList.stream().filter(pessoa -> pessoa.getId().equals(id));
+        pessoaModelList.add(pessoaModel);
+        pessoaModelList.remove(pessoaSelecionada);
+    }
 
 }

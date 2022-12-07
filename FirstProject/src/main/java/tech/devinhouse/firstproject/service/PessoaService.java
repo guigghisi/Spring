@@ -28,7 +28,9 @@ public class PessoaService {
     public List<PessoaModel> getPessoa(Long id){
         return pessoaModelList.stream().filter(pessoa -> pessoa.getId().equals(id)).toList();
     }
-    public void postPessoa(){}
+    public void postPessoa(PessoaModel pessoaModel){
+        pessoaModelList.add(pessoaModel);
+    }
     public void updatePessoa(){}
 
 }
